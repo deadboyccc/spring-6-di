@@ -4,11 +4,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 @Slf4j
-@Service
+@Service("standardGreetingService")
 public class GreetingServiceImpl implements GreetingService {
     @Override
     public String sayGreeting() {
-        log.info("Hello from GreetingServiceImpl - Baser Service");
+        log.info("Hello from GreetingServiceImpl - Baser/Standard Service");
         return "Hello";
 //        return "Hello Everyone From Base Service!";
     }

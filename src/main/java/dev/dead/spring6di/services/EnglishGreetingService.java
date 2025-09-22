@@ -1,11 +1,13 @@
 package dev.dead.spring6di.services;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Slf4j
 @Profile({"EN","default"})
+@Primary
 @Service("localizedGreetingService")
 public class EnglishGreetingService implements GreetingService {
     @Override

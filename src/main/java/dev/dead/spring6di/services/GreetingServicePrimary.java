@@ -2,10 +2,12 @@ package dev.dead.spring6di.services;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Slf4j
 @Primary
+@Profile("uat")
 @Service
 public class GreetingServicePrimary implements GreetingService {
     @Override

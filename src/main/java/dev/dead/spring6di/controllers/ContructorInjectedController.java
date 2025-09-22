@@ -5,16 +5,15 @@ import dev.dead.spring6di.services.GreetingServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 
-@Controller
 @Slf4j
-public class MyController {
+@Controller
+public class ContructorInjectedController {
     private final GreetingService greetingService;
-    MyController() {
-        this.greetingService = new GreetingServiceImpl();
+    public ContructorInjectedController(GreetingService greetingService) {
+        this.greetingService = greetingService;
     }
-    public String sayHello() {
-        log.info("In Controller");
+    public  String sayHello(){
         return greetingService.sayGreeting();
-//        return "Hello";
     }
+
 }

@@ -7,8 +7,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class GreetingServiceImpl implements GreetingService {
     @Override
-    public String sayHello() {
+    public String sayGreeting() {
         log.info("Hello from GreetingServiceImpl - Baser Service");
-        return "Hello Everyone From Base Service!";
+        return "Hello";
+//        return "Hello Everyone From Base Service!";
     }
 }
